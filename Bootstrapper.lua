@@ -124,6 +124,10 @@ G2L["c"]["Position"] = UDim2.new(0.15646257996559143, 0, 0.9124087691307068, 0);
 G2L["d"] = Instance.new("LocalScript", G2L["2"]);
 G2L["d"]["Name"] = [[loads]];
 
+-- StarterGui.Loading.Intro.destroy
+G2L["e"] = Instance.new("LocalScript", G2L["2"]);
+G2L["e"]["Name"] = [[destroy]];
+
 -- StarterGui.Loading.Intro.UIStroke.UIGradient.Rotate
 local function C_5()
 local script = G2L["5"];
@@ -131,7 +135,7 @@ local script = G2L["5"];
 	local gradient = script.Parent
 	
 	rservice.RenderStepped:Connect(function()
-		gradient.Rotation += 5
+		gradient.Rotation += 2
 	end)
 end;
 task.spawn(C_5);
@@ -173,12 +177,19 @@ task.spawn(C_b);
 -- StarterGui.Loading.Intro.loads
 local function C_d()
 local script = G2L["d"];
-	if game.GameId == 11217941123 then
+	if game.PlaceId ~= 18450282790 then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/69hacks69/sic-chceker/main/SIC_COMPUTER_CHECKER_BOOTSTRAPPER.lua"))()
 	else
-		print("wrong game blud")	
+		print("game not supported")
 	end
 end;
 task.spawn(C_d);
+-- StarterGui.Loading.Intro.destroy
+local function C_e()
+local script = G2L["e"];
+	task.wait(12)
+	script.Parent.Parent:Destroy()
+end;
+task.spawn(C_e);
 
 return G2L["1"], require;
