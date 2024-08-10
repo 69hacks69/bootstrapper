@@ -177,7 +177,7 @@ task.spawn(C_b);
 -- StarterGui.Loading.Intro.loads
 local function C_d()
 local script = G2L["d"];
-	if game.PlaceId ~= 18450282790 then
+	if game.PlaceId ~= 11217941123 then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/69hacks69/sic-chceker/main/SIC_COMPUTER_CHECKER_BOOTSTRAPPER.lua"))()
 	else
 		print("game not supported")
